@@ -11,7 +11,7 @@ Color transfer is an image editing process that naturally transfers the color th
 # Usage
 
 * `cf_3D_H.m`: the code of this TVC publication.
-* `cf_2D_H.m`: the code of the BMVC 2017 paper -- Gong, H., Finlayson, G.D., Fisher, R.B.: Recoding color transfer as a color homography. In: British Machine Vision Conference. BMVA (2016)
+* `cf_2D_H.m`: the code of the BMVC paper -- Gong, H., Finlayson, G.D., Fisher, R.B.: Recoding color transfer as a color homography. In: British Machine Vision Conference. BMVA (2016)
 
 # Testing
 * `test_main.m`: this file contains the evaluation code for re-producing the results in the paper.
