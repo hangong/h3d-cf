@@ -8,7 +8,7 @@ function [ei,model] = cf_3D_H(oi,ri,opt)
 %   * downsampling_res: specify the resolution of downsampled images
 %     for faster color transfer approximation. [] for disabling.
 %   * use_denoise: enable deniose by bilaterial filtering.
-%   * use_curve: enable tone-mapping esimation by polynomial models.
+%   * use_curve: enable tone-mapping esimation by a monotonic curve.
 %   * plot_RGB: an option for ploting RGBs (debug use).
 %
 
@@ -85,11 +85,9 @@ pe = bsxfun(@rdivide,pe(1:3,:),pe(4,:));
 pe = min(max(pe,0),1);
 n = size(pe,2);
 meanpe = mean(pe,1)'; % transformed brightness
-if opt.use_curve
-    meanf = model.pp(1+round(meanpe*255));
-else
-    meanf = model.pp(1+round(meanpe*255));
-end
+
+meanf = model.pp(1+floor(meanpe*999));
+
 meanf = max(meanf,0);
 nd = meanf./meanpe; % convert brightness change to shading
 nd(meanpe<1/255) = 1; % discard dark pixel shadings

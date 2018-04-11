@@ -1,15 +1,28 @@
 function fout = increasingF2(in,out,p,a)
 
-%% in: vector of x values
+%INCREASINGF2 estimates a monotonically increasing curve.
+%
+%   INCREASINGF2(IN,OUT) returns a monotonically increasing function curve
+%   that maps IN (vector of x values) to OUT (target vector of y values).
+%   The curve is represented in the form of LUT.
+%
+%   Options:
+%   * p: small fractional number (e.g. 0.000001)
+%     for faster color transfer approximation. [] for disabling.
+%   * a: size of LUT (e.g. 1000).
+%
+%   out ~= fout(floor(in*(a-1))+1)
 
-%% out: target vector of y values
+%   Copyright 2018 Graham Finlayson, Han Gong <gong@fedoraproject.org>,
+%   University of East Anglia.
 
-%% p: small fractional number (e.g. 0.000001)
-
-%% r=z where z=f(x) where f is monotnoically increasing and z~=y
+%   References:
+%   Gong, H., Finlayson, G.D., Fisher, R.B. and Fang, F., 2017. 3D color
+%   homography model for photo-realistic color transfer re-coding. The
+%   Visual Computer, pp.1-11.
 
 if ~exist('p','var'), p = 0; end
-if ~exist('a','var'), a = 255; end
+if ~exist('a','var'), a = 1000; end
  
 %quantise (necessary as we solve per quantisation level)
 in = round(in.*a)./a;

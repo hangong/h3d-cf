@@ -24,7 +24,7 @@ Nap = numel(ap.Name); % number of approximation methods
 Ncf = numel(cf.Name); % number of color transfer methods
 
 % discover all images
-Nf = 2;
+Nf = 200;
 
 if ~exist(out_path,'dir'), mkdir(out_path); end
 
