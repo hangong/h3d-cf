@@ -26,7 +26,7 @@ Color transfer is an image editing process that naturally transfers the color th
 `cf_MK.m` and `cf_Poly.m` are the implementations for two other color transfer approximation methods for comparison. The approximation outputs will be saved in the folder `out_pair`.
 
 # Dataset
-A set of 200 transfer cases for 4 different color transfer methods (800 test cases in total) are contained in the folder `in_pair`. Note that the code for the *original* color transfer methods is not provided here. Only the cached results for color transfer approximation is provided in the dataset.
+A set of 200 transfer cases for 4 different color transfer methods (800 test cases in total) are contained in the folder `in_pair`. Note that the code for the *original* color transfer methods is not provided here. Only the cached results for color transfer approximation are provided in the dataset.
 
 Rules of Filenames:
 * `*_s.jpg`: original source image.
