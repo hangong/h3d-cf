@@ -1,7 +1,14 @@
 # h3d-cf
-Gong, H., Finlayson, G.D., Fisher, R.B. and Fang, F., 2017. 3D color homography model for photo-realistic color transfer re-coding. The Visual Computer, pp.1-11.
 
-Copyright 2018 Han Gong (<gong@fedoraproject.org>), University of East Anglia.
+The code is provided for the following publications: 
+
+[1] Gong, H., Finlayson, G.D., Fisher, R.B. and Fang, F., 2017. 3D color homography model for photo-realistic color transfer re-coding. The Visual Computer, pp.1-11.
+
+[2] Gong, H., Finlayson, G.D., Fisher, R.B.: Recoding color transfer as a color homography. In: British Machine Vision Conference. BMVA (2016)
+
+Please cite the above papers if you find them useful for your research.
+
+Copyright 2018 Han Gong (<gong@fedoraproject.org>), University of {East Anglia, Edinburgh}.
 
 # Introduction
 Color transfer is an image editing process that naturally transfers the color theme of a source image to a target image. In this paper, we propose a 3D color homography model which approximates photo-realistic color transfer algorithm as a combination of a 3D perspective transform and a mean intensity mapping. A key advantage of our approach is that the re-coded color transfer algorithm is simple and accurate. Our evaluation demonstrates that our 3D color homography model delivers leading color transfer re-coding performance. In addition, we also show that our 3D color homography model can be applied to color transfer artifact fixing, complex color transfer acceleration, and color-robust image stitching.
@@ -10,8 +17,8 @@ Color transfer is an image editing process that naturally transfers the color th
 
 # Usage
 
-* `cf_3D_H.m`: the code of this TVC publication.
-* `cf_2D_H.m`: the code of the BMVC paper -- Gong, H., Finlayson, G.D., Fisher, R.B.: Recoding color transfer as a color homography. In: British Machine Vision Conference. BMVA (2016)
+* `cf_3D_H.m`: the code of the TVC paper [1].
+* `cf_2D_H.m`: the code of the BMVC paper [2].
 
 # Testing
 * `test_main.m`: this file contains the evaluation code for re-producing the results in the paper.
